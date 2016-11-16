@@ -43,7 +43,7 @@
           }
 
           if(typeof patient.maritalStatus.text !== 'undefined') {
-            marstatus = patient.maritalStatus.text.join(' ');
+            marstatus = patient.maritalStatus.text;
           };
 
           var height = byCodes('8302-2');
