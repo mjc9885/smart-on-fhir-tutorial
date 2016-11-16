@@ -27,7 +27,6 @@
         $.when(pt, obv).done(function(patient, obv) {
           var byCodes = smart.byCodes(obv, 'code');
           var gender = patient.gender;
-          var marstatus = patient.maritalStatus;
           var dob = new Date(patient.birthDate);
           var day = dob.getDate();
           var monthIndex = dob.getMonth() + 1;
@@ -36,11 +35,16 @@
           var dobStr = monthIndex + '/' + day + '/' + year;
           var fname = '';
           var lname = '';
+          var marstatus = '';
 
           if(typeof patient.name[0] !== 'undefined') {
             fname = patient.name[0].given.join(' ');
             lname = patient.name[0].family.join(' ');
           }
+
+          if(typeof patient.maritalStatus[0] !== 'undefined') {
+            marstatus = patient.maritalStatus[0].display.join(' ');
+          };
 
           var height = byCodes('8302-2');
           var systolicbp = getBloodPressureValue(byCodes('55284-4'),'8480-6');
