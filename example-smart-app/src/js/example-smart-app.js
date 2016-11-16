@@ -42,8 +42,8 @@
             lname = patient.name[0].family.join(' ');
           }
 
-          if(typeof patient.maritalStatus[0] !== 'undefined') {
-            marstatus = patient.maritalStatus[0].display.join(' ');
+          if(typeof patient.maritalStatus.text !== 'undefined') {
+            marstatus = patient.maritalStatus.text.join(' ');
           };
 
           var height = byCodes('8302-2');
