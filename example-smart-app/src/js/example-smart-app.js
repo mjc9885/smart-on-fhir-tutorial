@@ -62,6 +62,8 @@
           var hdl = byCodes('2085-9');
           var ldl = byCodes('2089-1');
 
+          var penicillin = byCodes('373270004');
+
           var p = defaultPatient();
           p.birthdate = dobStr;
           p.gender = gender;
