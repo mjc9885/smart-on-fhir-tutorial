@@ -36,6 +36,7 @@
 
         $.when(pt, obv).done(function(patient, obv) {
           var byCodes = smart.byCodes(obv, 'code');
+          var allergCodes = smart.byCodes(allerg, 'code');
           var gender = patient.gender;
           var dob = new Date(patient.birthDate);
           var day = dob.getDate();
@@ -62,8 +63,8 @@
           var hdl = byCodes('2085-9');
           var ldl = byCodes('2089-1');
 
-          if(typeof byCodes('373270004') !== 'undefined') {
-            var penicillin = byCodes('373270004');
+          if(typeof allergCodes('373270004') !== 'undefined') {
+            var penicillin = allergCodes('373270004');
           };
 
           var p = defaultPatient();
