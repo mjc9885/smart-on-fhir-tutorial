@@ -93,6 +93,10 @@
           if(typeof ldl[0] != 'undefined' && typeof ldl[0].valueQuantity.value != 'undefined' && typeof ldl[0].valueQuantity.unit != 'undefined') {
             p.ldl = ldl[0].valueQuantity.value + ' ' + ldl[0].valueQuantity.unit;
           }
+          
+          if(typeof penicillin[0] !=' undefined' && typeof penicillin[0].status != 'undefined') {
+            p.penicillin = penicillin;
+          }
           ret.resolve(p);
         });
       } else {
