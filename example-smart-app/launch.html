@@ -14,17 +14,10 @@
   <body>
     <script src='./lib/fhir-client.js'></script>
     <script>
-      function ready(smart) {
-        var patient = smart.api.read({type: 'Patient', id: '711924'}).then(function(response) {
-          document.body.innerText = JSON.stringify(response);
-        });
-      }
-      function notReady() {
-        if (window.location.href.indexOf('error') < 0) {
-          document.body.innerText = "Launch first.";
-        }
-      }
-      FHIR.oauth2.ready(ready, notReady);
+      FHIR.oauth2.authorize({
+ -        'client_id': '0ba61b5d-81a6-4bc5-944c-624fc5f6fb77',
+ -        'scope':  'user/Patient.read user/MedicationStatement.read user/MedicationStatement.write'
+ -      });
     </script>
   </body>
 </html>
