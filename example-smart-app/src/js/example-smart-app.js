@@ -96,7 +96,7 @@
           }
           
           if(typeof penicillin[0] !=' undefined') {
-            p.penicillin = penicillin;
+            p.penicillin = penicillin[0].display;
           }
           ret.resolve(p);
         });
