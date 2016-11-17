@@ -95,7 +95,7 @@
             p.ldl = ldl[0].valueQuantity.value + ' ' + ldl[0].valueQuantity.unit;
           }
           
-          if(typeof penicillin[0] !=' undefined' && typeof penicillin[0].status != 'undefined') {
+          if(typeof penicillin[0] !=' undefined') {
             p.penicillin = penicillin;
           }
           ret.resolve(p);
