@@ -123,6 +123,7 @@
       diastolicbp: {value: ''},
       ldl: {value: ''},
       hdl: {value: ''},
+      penicillin:  {value: ''}
     };
   }
 
@@ -184,6 +185,7 @@
     $('#diastolicbp').html(p.diastolicbp);
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
+    $('#penicillin').html(p.penicillin);
   };
 
 })(window);
